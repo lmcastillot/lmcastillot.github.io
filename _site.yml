@@ -1,17 +1,19 @@
 name: "my-website"
 output_dir: "."
 navbar:
-  title: "Lina Castillo Torres"
+  title: "Lina Maria Castillo Torres"
   left:
     - text: "Hola"
       href: index.html
-    - text: "Sobre mi"
+    - text: "Sobre mí"
       href: about.html
     - text: "Trabajos"
       href: work.html
-    - text: "Densidades"
+    - text: "Densidad"
       href: density.html
   
 output:
   html_document:
-   theme: spacelab
+    theme: united
+
+   

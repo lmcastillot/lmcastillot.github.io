@@ -1,7 +1,17 @@
 ---
-title: "My Website"
+output:
+  html_document:
+    includes:
+      in_header: painting.html 
 ---
 
-Hello, Website!
 
-##  Bienvenidos a la diversión
+
+
+
+
+
+"En el fondo, la teoría de probabilidades es sólo sentido común expresado con números. *Pierre Simon Laplace*."
+
+
+[¡¡Bienvenidos!!](about.html)

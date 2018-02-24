@@ -2,4 +2,12 @@
 title: "Densidades"
 ---
 
-estas es mas
+```{r include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+###Función de densidad de una distribución Normal
+
+Una de las distribuciones mas utilizadas es la distribución normal, por lo cual programas como **R** tiene a disposición del usuario comandos predeterminados que permiten calcular la funación de  
+

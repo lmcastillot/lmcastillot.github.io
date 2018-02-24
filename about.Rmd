@@ -1,6 +1,15 @@
 ---
-title: "About This Website"
+title: "¡¡Bienvenidos!!"
+
+output:
+  html_document:
+    includes:
+      in_header: lina.html 
 ---
 
 
-Aqui información sobre mi página web.
+Hola, soy Lina María Castillo Torres, estudiante de Estadística de la Universidad Nacional de Colombia, en la sede Medellín.
+
+Nací en Bogotá hace 22 años, mi primaria y mi bachillerato lo estudié en el colegio Liceo Campo David, y el año 2014 ingresé a la universidad. Escogí estadística porque es una ciencia que se emplea en todos campos, es decir, es una ciencia muy diversa que se moldea conforme se va enfocando a un tema, lo que a mi parecer lo hace una ciencia especial y única.
+
+Soy una persona alegra que le gusta hacer diversos tipos de actividades como bailar, nadar y montar en bicicleta, en mis tiempos libres también me gusta leer libro de ciencia ficción y novelas románticas, además me gusta la música de los 80's y los 90's.

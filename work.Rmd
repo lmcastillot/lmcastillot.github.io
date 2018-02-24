@@ -1,5 +1,37 @@
 ---
-title: " Trabajos estadística"
+title: "Trabajos de estadística"
 ---
 
-Aja que como de que no
+
+
+A lo largo de mi proceso educativo he desarrollado diversos trabajos estadísticos, la mayoría de ellos en colaboración con mis compañeros de carrera. Algunos de estos trabajos se mencionan a continuación:
+
+
+* Análisis descriptivo de una encuesta de "Cultura general" realizada a los estudiantes de la Universidad Nacional de Colombia, sede Medellín.
+
+
+* Diseño y análisis de un experimento acerca de la duración en tiempo de vida la velas de diferentes colores y de diferentes marcas.
+
+
+* Realización de caras en el programa R.
+
+
+* Análisis de los posibles factores que influencian el PAPA (_Promedio aritmético ponderado acumulado_) de los estudiantes de la Universidad Nacional de Colombia, sede Medellín. Este análisis se realizó tomando una pequeña muestra de estudiantes.
+
+
+* Análisis descriptivo acerca de una encuesta realizada sobre el tipo de memoria que tienen los estudiantes de la Universidad Nacional de Colombia, sede Medellín.
+
+
+* Análisis de hacia que lado mira un Cristo crucificado, este análisis se hace por medio que la obtención de la sitribución de dichos datos.
+
+
+* Recreación del juego _"Escaleras y serpientes"_, por medio del programa R.
+
+
+* Simulación y análisis de la probabilidad de ganar de un jugador en diferentes condiciones el juego _"Escaleras y serpientes"_.
+
+* Análisis de regresión de la relación entre las estaturas de los hijos con sus padres y de las hijas con sus madres, esta también realizando una comparación mediante métodos bayesianos.
+
+
+* Análisis del kilometraje de taxis y vehículos particulares en Medellín, mediante métodos bayesianos, como la distribución a priori y a posteriori.
+
