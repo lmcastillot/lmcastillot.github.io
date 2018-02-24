@@ -5,7 +5,7 @@ navbar:
   left:
     - text: "Hola"
       href: index.html
-    - text: "Sobre mí"
+    - text: "Sobre mi"
       href: about.html
     - text: "Trabajos"
       href: work.html
