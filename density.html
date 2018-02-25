@@ -28,38 +28,38 @@
 div.sourceCode { overflow-x: auto; }
 table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
   margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+table.sourceCode { width: 100%; line-height: 100%; }
 td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
 td.sourceCode { padding-left: 5px; }
-pre, code { background-color: #f8f8f8; }
-code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
-code > span.dt { color: #204a87; } /* DataType */
-code > span.dv { color: #0000cf; } /* DecVal */
-code > span.bn { color: #0000cf; } /* BaseN */
-code > span.fl { color: #0000cf; } /* Float */
-code > span.ch { color: #4e9a06; } /* Char */
-code > span.st { color: #4e9a06; } /* String */
-code > span.co { color: #8f5902; font-style: italic; } /* Comment */
-code > span.ot { color: #8f5902; } /* Other */
-code > span.al { color: #ef2929; } /* Alert */
-code > span.fu { color: #000000; } /* Function */
-code > span.er { color: #a40000; font-weight: bold; } /* Error */
-code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #000000; } /* Constant */
-code > span.sc { color: #000000; } /* SpecialChar */
-code > span.vs { color: #4e9a06; } /* VerbatimString */
-code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
 code > span.im { } /* Import */
-code > span.va { color: #000000; } /* Variable */
-code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
-code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
 code > span.ex { } /* Extension */
-code > span.at { color: #c4a000; } /* Attribute */
-code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
-code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 <style type="text/css">
   pre:not([class]) {
@@ -249,17 +249,18 @@ $(document).ready(function () {
 </div>
 
 
-<p>En la estadística se trabaja con una alta gama de distribuciones discretas y continuas, de las cuales en la mayorias de casos se usan las distribuciones continuas, como la distruibución log-normal, t.student, Chi-cuadrado, normal, entre otras.</p>
+<p>En la estadística se trabaja con una alta gama de distribuciones discretas y continuas. En la mayoría de casos se usan las distribuciones continuas, como la distruibución normal, log-normal, t-student, <span class="math inline">\(\chi^2\)</span>, entre otras.</p>
 <div id="funcion-de-densidad-de-una-distribucion-normal" class="section level5">
 <h5><strong>Función de densidad de una distribución Normal</strong></h5>
-<p>Ahora se realizará un ejemplo de la función de densidad de la distribución normal la cual tiene por fórmula:</p>
-<p><span class="math display">\[ f(x)=\frac{1}{\sqrt{2\pi\sigma}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}\]</span>, donde <span class="math inline">\(-\infty&lt; x &lt; +\infty\)</span>, para una variable <span class="math inline">\(x\)</span> cuantitativa. Como encontrar y realizar graficas de densidad para esta variable es muy engorroso manualmente, utilizaremos el programa <code>R</code> que brinda el comando predeterminado <code>dnorm(x,mu,sigma)</code>, el cual encuentra la función de densidad de la variable <span class="math inline">\(x\)</span> bajo el <span class="math inline">\(\mu\)</span> y el <span class="math inline">\(\sigma\)</span> especificados por el investigador.</p>
-<p>Es importante aclarar que con <code>R</code> también posee otros comandos predeterminados para la distribución normal, tales como <code>pnorm,rnorm</code> y <code>qnorm</code>.</p>
-<p>Ahora se iniciará generando una muestra de tamaño 200 de una población normal de media 10 y desviación típica 1 .</p>
+<p>Ahora se realizará un ejemplo de cómo graficar la función de densidad de la distribución normal, la cual tiene por fórmula:</p>
+<p><span class="math display">\[ f(x)=\frac{1}{\sqrt{2\pi\sigma}}e^{\frac{-(x-\mu)^2}{2\sigma^2}},\]</span> donde <span class="math inline">\(-\infty&lt; x &lt; +\infty\)</span> es una variable cuantitativa.</p>
+<p>Como encontrar y realizar gráficas de densidad para esta variable es muy engorroso manualmente, utilizaremos el programa <code>R</code> que brinda el comando predeterminado <code>dnorm(x,mu,sigma)</code>, el cual encuentra la función de densidad de la variable <span class="math inline">\(x\)</span> bajo el <span class="math inline">\(\mu\)</span> y el <span class="math inline">\(\sigma\)</span> especificados por el investigador.</p>
+<p>Es importante aclarar que <code>R</code> también posee otros comandos predeterminados para la distribución normal, tales como <code>pnorm,rnorm</code> y <code>qnorm</code>.</p>
+<p>Ahora se iniciará generando una muestra de tamaño 200 de una población normal de media 10 y desviación típica 1.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x&lt;-<span class="kw">rnorm</span>(<span class="dv">200</span>, <span class="dt">mean=</span> <span class="dv">10</span>, <span class="dt">sd=</span><span class="dv">1</span>)
 x</code></pre></div>
-<p>De esta muestra se puede obtener una descripción básica como la media muestra y la desviación estandar de <span class="math inline">\(x\)</span>.</p>
-<p>Ahora con la información que se tiene se generará del gráfico de densidad correspondiente:</p>
+<p>De esta muestra se puede obtener una descripción básica como la media muestral y la desviación estandar de <span class="math inline">\(x\)</span>.</p>
+<p>Ahora, con la información que se tiene, se generará el gráfico de densidad correspondiente:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">curve</span>(<span class="kw">dnorm</span>(x,<span class="dv">10</span>,<span class="dv">1</span>), <span class="dt">from =</span> <span class="dv">7</span>, <span class="dt">to =</span> <span class="dv">13</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>,<span class="dt">lwd=</span><span class="dv">3</span>,
       <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>,<span class="dt">ylab=</span><span class="st">&quot;f(x)&quot;</span>,<span class="dt">main=</span><span class="st">&quot;Función de Densidad N(10,1)&quot;</span>)</code></pre></div>
 <p><img src="density_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>

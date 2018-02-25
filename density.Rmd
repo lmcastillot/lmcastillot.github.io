@@ -5,26 +5,28 @@ title: "Densidades"
 ```{r include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-En la estadística se trabaja con una alta gama de distribuciones discretas y continuas, de las cuales en la mayorias de casos se usan las distribuciones continuas, como la distruibución log-normal, t.student, Chi-cuadrado, normal, entre otras.
+En la estadística se trabaja con una alta gama de distribuciones discretas y continuas. En la mayoría de casos se usan las distribuciones continuas, como la distruibución normal, log-normal, t-student, $\chi^2$, entre otras.
 
 ##### __Función de densidad de una distribución Normal__
 
 
-Ahora se realizará un ejemplo de la función de densidad de la distribución normal la cual tiene por fórmula:
+Ahora se realizará un ejemplo de cómo graficar la función de densidad de la distribución normal, la cual tiene por fórmula:
 
-$$ f(x)=\frac{1}{\sqrt{2\pi\sigma}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}$$,
-donde $-\infty< x < +\infty$, para una variable $x$ cuantitativa. Como encontrar y realizar graficas de densidad para esta variable es muy engorroso manualmente, utilizaremos el programa `R` que brinda el comando predeterminado `dnorm(x,mu,sigma)`, el cual encuentra la función de densidad de la variable $x$ bajo el $\mu$ y el $\sigma$ especificados por el investigador.
+$$ f(x)=\frac{1}{\sqrt{2\pi\sigma}}e^{\frac{-(x-\mu)^2}{2\sigma^2}},$$
+donde $-\infty< x < +\infty$ es una variable cuantitativa.
 
-Es importante aclarar que con `R` también posee otros comandos predeterminados para la distribución normal, tales como `pnorm,rnorm` y `qnorm`.
+Como encontrar y realizar gráficas de densidad para esta variable es muy engorroso manualmente, utilizaremos el programa `R` que brinda el comando predeterminado `dnorm(x,mu,sigma)`, el cual encuentra la función de densidad de la variable $x$ bajo el $\mu$ y el $\sigma$ especificados por el investigador.
 
-Ahora se iniciará generando una muestra de tamaño 200 de una población normal de media 10 y desviación típica 1 . 
+Es importante aclarar que `R` también posee otros comandos predeterminados para la distribución normal, tales como `pnorm,rnorm` y `qnorm`.
+
+Ahora se iniciará generando una muestra de tamaño 200 de una población normal de media 10 y desviación típica 1.
 ```{r  results='hide'}
 x<-rnorm(200, mean= 10, sd=1)
 x
 ```
-De esta muestra se puede obtener una descripción básica como la media muestra y la desviación estandar de $x$.
+De esta muestra se puede obtener una descripción básica como la media muestral y la desviación estandar de $x$.
 
-Ahora con la información que se tiene se generará del gráfico de densidad correspondiente:
+Ahora, con la información que se tiene, se generará el gráfico de densidad correspondiente:
 
 ```{r}
 curve(dnorm(x,10,1), from = 7, to = 13, col="red",lwd=3,
