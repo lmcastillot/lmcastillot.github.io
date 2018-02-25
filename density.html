@@ -249,24 +249,19 @@ $(document).ready(function () {
 </div>
 
 
-<p>En la estadística se trabaja con una alta gama de distribuciones discretas y continuas, de las cuales la mayorias de casos se usan las distribuciones continuas</p>
+<p>En la estadística se trabaja con una alta gama de distribuciones discretas y continuas, de las cuales en la mayorias de casos se usan las distribuciones continuas, como la distruibución log-normal, t.student, Chi-cuadrado, normal, entre otras.</p>
 <div id="funcion-de-densidad-de-una-distribucion-normal" class="section level5">
 <h5><strong>Función de densidad de una distribución Normal</strong></h5>
-<p>Una de las distribuciones mas utilizadas es la distribución normal, por lo cual programas como <strong>R</strong> tiene a disposición del usuario comandos predeterminados que permiten calcular la funación de</p>
-<p>Ahora se hará un ejemplo para ilustrar como se construye una función de densidad en <strong><em>R</em></strong>, en este caso se hará para una variable cuantitativa:</p>
-<p>Se generará una secuencia de números el cual seran los datos sobre los cuales se generará la función de densidad.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x=<span class="st"> </span><span class="kw">seq</span>(<span class="dv">260</span>,<span class="dv">280</span>, <span class="dt">by=</span><span class="fl">0.5</span>)
-<span class="kw">dnorm</span>(x, <span class="dv">270</span>,<span class="dv">11</span>)</code></pre></div>
-<pre><code>##  [1] 0.02399147 0.02497780 0.02595102 0.02690650 0.02783958 0.02874556
-##  [7] 0.02961977 0.03045757 0.03125443 0.03200594 0.03270787 0.03335620
-## [13] 0.03394718 0.03447732 0.03494346 0.03534281 0.03567294 0.03593185
-## [19] 0.03611792 0.03623003 0.03626748 0.03623003 0.03611792 0.03593185
-## [25] 0.03567294 0.03534281 0.03494346 0.03447732 0.03394718 0.03335620
-## [31] 0.03270787 0.03200594 0.03125443 0.03045757 0.02961977 0.02874556
-## [37] 0.02783958 0.02690650 0.02595102 0.02497780 0.02399147</code></pre>
-<p>ahora se hará la gráfica de densidad</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">curve</span>(<span class="kw">dnorm</span>(x,<span class="dv">170</span>,<span class="dv">15</span>),<span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">130</span>,<span class="dv">210</span>),<span class="dt">col=</span><span class="st">&quot;red&quot;</span>,<span class="dt">lwd=</span><span class="dv">2</span>,
-      <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>,<span class="dt">ylab=</span><span class="st">&quot;f(x)&quot;</span>,<span class="dt">main=</span><span class="st">&quot;Función de Densidad N(170,15)&quot;</span>)</code></pre></div>
+<p>Ahora se realizará un ejemplo de la función de densidad de la distribución normal la cual tiene por fórmula:</p>
+<p><span class="math display">\[ f(x)=\frac{1}{\sqrt{2\pi\sigma}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}\]</span>, donde <span class="math inline">\(-\infty&lt; x &lt; +\infty\)</span>, para una variable <span class="math inline">\(x\)</span> cuantitativa. Como encontrar y realizar graficas de densidad para esta variable es muy engorroso manualmente, utilizaremos el programa <code>R</code> que brinda el comando predeterminado <code>dnorm(x,mu,sigma)</code>, el cual encuentra la función de densidad de la variable <span class="math inline">\(x\)</span> bajo el <span class="math inline">\(\mu\)</span> y el <span class="math inline">\(\sigma\)</span> especificados por el investigador.</p>
+<p>Es importante aclarar que con <code>R</code> también posee otros comandos predeterminados para la distribución normal, tales como <code>pnorm,rnorm</code> y <code>qnorm</code>.</p>
+<p>Ahora se iniciará generando una muestra de tamaño 200 de una población normal de media 10 y desviación típica 1 .</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x&lt;-<span class="kw">rnorm</span>(<span class="dv">200</span>, <span class="dt">mean=</span> <span class="dv">10</span>, <span class="dt">sd=</span><span class="dv">1</span>)
+x</code></pre></div>
+<p>De esta muestra se puede obtener una descripción básica como la media muestra y la desviación estandar de <span class="math inline">\(x\)</span>.</p>
+<p>Ahora con la información que se tiene se generará del gráfico de densidad correspondiente:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">curve</span>(<span class="kw">dnorm</span>(x,<span class="dv">10</span>,<span class="dv">1</span>), <span class="dt">from =</span> <span class="dv">7</span>, <span class="dt">to =</span> <span class="dv">13</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>,<span class="dt">lwd=</span><span class="dv">3</span>,
+      <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>,<span class="dt">ylab=</span><span class="st">&quot;f(x)&quot;</span>,<span class="dt">main=</span><span class="st">&quot;Función de Densidad N(10,1)&quot;</span>)</code></pre></div>
 <p><img src="density_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 </div>
 

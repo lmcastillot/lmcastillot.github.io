@@ -5,25 +5,29 @@ title: "Densidades"
 ```{r include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-En la estadística se trabaja con una alta gama de distribuciones discretas y continuas, de las cuales la mayorias de casos se usan las distribuciones continuas 
+En la estadística se trabaja con una alta gama de distribuciones discretas y continuas, de las cuales en la mayorias de casos se usan las distribuciones continuas, como la distruibución log-normal, t.student, Chi-cuadrado, normal, entre otras.
+
+##### __Función de densidad de una distribución Normal__
 
 
-#####**Función de densidad de una distribución Normal**
+Ahora se realizará un ejemplo de la función de densidad de la distribución normal la cual tiene por fórmula:
 
-Una de las distribuciones mas utilizadas es la distribución normal, por lo cual programas como **R** tiene a disposición del usuario comandos predeterminados que permiten calcular la funación de  
+$$ f(x)=\frac{1}{\sqrt{2\pi\sigma}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}$$,
+donde $-\infty< x < +\infty$, para una variable $x$ cuantitativa. Como encontrar y realizar graficas de densidad para esta variable es muy engorroso manualmente, utilizaremos el programa `R` que brinda el comando predeterminado `dnorm(x,mu,sigma)`, el cual encuentra la función de densidad de la variable $x$ bajo el $\mu$ y el $\sigma$ especificados por el investigador.
 
-Ahora se hará un ejemplo para ilustrar como se construye una función de densidad en  ***R***, en este caso se hará para una variable cuantitativa:
+Es importante aclarar que con `R` también posee otros comandos predeterminados para la distribución normal, tales como `pnorm,rnorm` y `qnorm`.
 
-Se generará una secuencia de números el cual seran los datos sobre los cuales se generará la función de densidad. 
-```{r  }
-x= seq(260,280, by=0.5)
-dnorm(x, 270,11)
+Ahora se iniciará generando una muestra de tamaño 200 de una población normal de media 10 y desviación típica 1 . 
+```{r  results='hide'}
+x<-rnorm(200, mean= 10, sd=1)
+x
 ```
+De esta muestra se puede obtener una descripción básica como la media muestra y la desviación estandar de $x$.
 
+Ahora con la información que se tiene se generará del gráfico de densidad correspondiente:
 
-ahora se hará la gráfica de densidad
 ```{r}
-curve(dnorm(x,170,15),xlim=c(130,210),col="red",lwd=2,
-      xlab="x",ylab="f(x)",main="Función de Densidad N(170,15)")
+curve(dnorm(x,10,1), from = 7, to = 13, col="red",lwd=3,
+      xlab="x",ylab="f(x)",main="Función de Densidad N(10,1)")
 ```
 
