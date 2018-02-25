@@ -4,14 +4,9 @@ output:
     includes:
       in_header: painting.html 
 ---
+\  
+
+##### "En el fondo, la teoría de probabilidades es sólo sentido común expresado con números. *Pierre Simon Laplace*."
 
 
-
-
-
-
-
-"En el fondo, la teoría de probabilidades es sólo sentido común expresado con números. *Pierre Simon Laplace*."
-
-
-[¡¡Bienvenidos!!](about.html)
+# [¡¡BIENVENIDOS!!](about.html)

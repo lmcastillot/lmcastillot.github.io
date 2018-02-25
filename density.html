@@ -20,25 +20,51 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
 
 <style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+</style>
 <style type="text/css">
   pre:not([class]) {
     background-color: white;
   }
 </style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
-
 
 
 <style type="text/css">
@@ -181,7 +207,7 @@ $(document).ready(function () {
   <a href="index.html">Hola</a>
 </li>
 <li>
-  <a href="about.html">Sobre mÃ­</a>
+  <a href="about.html">Sobre mi</a>
 </li>
 <li>
   <a href="work.html">Trabajos</a>
@@ -206,9 +232,25 @@ $(document).ready(function () {
 </div>
 
 
-<div id="funcion-de-densidad-de-una-distribucion-normal" class="section level3">
-<h3>Función de densidad de una distribución Normal</h3>
+<p>En la estadística se trabaja con una alta gama de distribuciones discretas y continuas, de las cuales la mayorias de casos se usan las distribuciones continuas</p>
+<div id="funcion-de-densidad-de-una-distribucion-normal" class="section level5">
+<h5><strong>Función de densidad de una distribución Normal</strong></h5>
 <p>Una de las distribuciones mas utilizadas es la distribución normal, por lo cual programas como <strong>R</strong> tiene a disposición del usuario comandos predeterminados que permiten calcular la funación de</p>
+<p>Ahora se hará un ejemplo para ilustrar como se construye una función de densidad en <strong><em>R</em></strong>, en este caso se hará para una variable cuantitativa:</p>
+<p>Se generará una secuencia de números el cual seran los datos sobre los cuales se generará la función de densidad.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x=<span class="st"> </span><span class="kw">seq</span>(<span class="dv">260</span>,<span class="dv">280</span>, <span class="dt">by=</span><span class="fl">0.5</span>)
+<span class="kw">dnorm</span>(x, <span class="dv">270</span>,<span class="dv">11</span>)</code></pre></div>
+<pre><code>##  [1] 0.02399147 0.02497780 0.02595102 0.02690650 0.02783958 0.02874556
+##  [7] 0.02961977 0.03045757 0.03125443 0.03200594 0.03270787 0.03335620
+## [13] 0.03394718 0.03447732 0.03494346 0.03534281 0.03567294 0.03593185
+## [19] 0.03611792 0.03623003 0.03626748 0.03623003 0.03611792 0.03593185
+## [25] 0.03567294 0.03534281 0.03494346 0.03447732 0.03394718 0.03335620
+## [31] 0.03270787 0.03200594 0.03125443 0.03045757 0.02961977 0.02874556
+## [37] 0.02783958 0.02690650 0.02595102 0.02497780 0.02399147</code></pre>
+<p>ahora se hará la gráfica de densidad</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">curve</span>(<span class="kw">dnorm</span>(x,<span class="dv">170</span>,<span class="dv">15</span>),<span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">130</span>,<span class="dv">210</span>),<span class="dt">col=</span><span class="st">&quot;red&quot;</span>,<span class="dt">lwd=</span><span class="dv">2</span>,
+      <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>,<span class="dt">ylab=</span><span class="st">&quot;f(x)&quot;</span>,<span class="dt">main=</span><span class="st">&quot;Función de Densidad N(170,15)&quot;</span>)</code></pre></div>
+<p><img src="density_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 </div>
 
 

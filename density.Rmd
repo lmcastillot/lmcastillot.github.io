@@ -3,11 +3,27 @@ title: "Densidades"
 ---
 
 ```{r include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
+```
+En la estadística se trabaja con una alta gama de distribuciones discretas y continuas, de las cuales la mayorias de casos se usan las distribuciones continuas 
+
+
+#####**Función de densidad de una distribución Normal**
+
+Una de las distribuciones mas utilizadas es la distribución normal, por lo cual programas como **R** tiene a disposición del usuario comandos predeterminados que permiten calcular la funación de  
+
+Ahora se hará un ejemplo para ilustrar como se construye una función de densidad en  ***R***, en este caso se hará para una variable cuantitativa:
+
+Se generará una secuencia de números el cual seran los datos sobre los cuales se generará la función de densidad. 
+```{r  }
+x= seq(260,280, by=0.5)
+dnorm(x, 270,11)
 ```
 
 
-###Función de densidad de una distribución Normal
-
-Una de las distribuciones mas utilizadas es la distribución normal, por lo cual programas como **R** tiene a disposición del usuario comandos predeterminados que permiten calcular la funación de  
+ahora se hará la gráfica de densidad
+```{r}
+curve(dnorm(x,170,15),xlim=c(130,210),col="red",lwd=2,
+      xlab="x",ylab="f(x)",main="Función de Densidad N(170,15)")
+```
 
