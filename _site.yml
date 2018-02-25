@@ -4,12 +4,16 @@ navbar:
   title: "Lina Maria Castillo Torres"
   left:
     - text: "Hola"
+      icon: fa-star
       href: index.html
     - text: "Sobre mi"
+      icon: fa-user
       href: about.html
     - text: "Trabajos"
+      icon: fa-copy
       href: work.html
     - text: "Densidad"
+      icon: fa-skyatlas
       href: density.html
   
 output:
